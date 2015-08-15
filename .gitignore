@@ -1,6 +1,3 @@
-!.gitignore
-!.gitkeep
-
 _*
 *~
 *.log
@@ -9,9 +6,12 @@ Thumbs.db
 
 /.idea
 
-/app/database/*
-/app/logs/mysq/*
-/app/logs/nginx/*
-/app/logs/php/*
-/app/sessions/*
-/app/tmp/*
+/app/database/
+/app/logs/mysql/
+/app/logs/nginx/
+/app/logs/php/
+/app/sessions/
+/app/tmp/
+
+!.gitignore
+!.gitkeep
