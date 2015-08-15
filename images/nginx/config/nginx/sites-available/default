@@ -1,0 +1,28 @@
+upstream php-fpm {
+    server php:9000;
+}
+
+server {
+	listen 80 default_server;
+
+    server_name localhost;
+
+	root /var/app/web;
+	
+	index index.php index.html;
+
+	location / {
+		try_files $uri $uri/ =404;
+	}
+
+	location ~ \.php$ {
+	    include fastcgi.conf;
+	    fastcgi_pass php-fpm;
+		fastcgi_split_path_info ^(.+\.php)(/.*)$;
+		fastcgi_param HTTPS off;
+	}
+
+    location ~ /\. {
+        deny all;
+    }
+}
