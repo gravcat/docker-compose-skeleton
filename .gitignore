@@ -1,3 +1,6 @@
+!.gitignore
+!.gitkeep
+
 _*
 *~
 *.log
@@ -12,6 +15,3 @@ Thumbs.db
 /app/logs/php/
 /app/sessions/
 /app/tmp/
-
-!.gitignore
-!.gitkeep
